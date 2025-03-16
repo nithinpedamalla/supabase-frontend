@@ -7,12 +7,13 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const API_URL="https://railway.com/project/d2b4c7e5-40ba-40d3-b5b1-f62fc8b45ebb/service/e1f7d103-a56e-496f-b7f6-713a063ab93a?environmentId=2e9790b4-825a-4927-9a47-1e8e8e2ddc49"
  
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/login", { email, password });
+      const res = await axios.post(`${API_URL}/login`, { email, password });
       alert(res.data.message);
       navigate("/signup");
     } catch (error) {
