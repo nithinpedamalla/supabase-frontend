@@ -16,7 +16,7 @@ const Signup = () => {
       alert(res.data.message);
       navigate("/login");
     } catch (error) {
-      alert(error.response.data.error);
+      //alert(error.response.data.error);
     }
   };
 
