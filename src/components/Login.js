@@ -7,7 +7,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const API_URL="supabase-backend-production-5efc.up.railway.app"
+  const API_URL="https://supabase-backend-production-5efc.up.railway.app"
  
 
   const handleLogin = async (e) => {
