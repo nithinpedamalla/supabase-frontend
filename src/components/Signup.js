@@ -12,21 +12,13 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-        const { data, error } = await supabase
-            .from("users")
-            .insert([{ email, password }]);
-
-        if (error) {
-            console.error("Signup error:", error);
-        } else {
-            alert("User signed up successfully");
-            navigate("/login");
-        }
-    } catch (err) {
-        console.error("Unexpected error:", err);
+      const res = await axios.post(`${API_URL}/signup`, { email, password });
+      alert(res.data.message);
+      navigate("/login");
+    } catch (error) {
+      //alert(error.response.data.error);
     }
-};
-
+  };
 
   return (
     <div className="flex h-screen justify-center items-center">
