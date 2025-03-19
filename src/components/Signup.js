@@ -14,6 +14,7 @@ const Signup = () => {
     try {
       const res = await axios.post(`${API_URL}/signup`, { email, password });
       alert(res.data.message);
+      console.log("afer route");
       navigate("/login");
     } catch (error) {
       //alert(error.response.data.error);
