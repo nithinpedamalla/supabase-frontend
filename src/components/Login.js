@@ -15,7 +15,7 @@ const Login = () => {
     try {
       const res = await axios.post(`${API_URL}/login`, { email, password });
       alert(res.data.message);
-      navigate("/signup");
+      navigate("/welcome");
     } catch (error) {
       alert(error.response.data.error);
     }
