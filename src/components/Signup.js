@@ -13,10 +13,10 @@ const Signup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(`${API_URL}/signup`, { email, password, phone });
-      alert("Signup successful! Verify your email and phone.");
+      alert("Signup successful! Verify your email and phone."+res.data.message );
       navigate("/verify-phone"); // Redirect to phone verification
     } catch (error) {
-      alert(error.response?.data?.error || "Signup failed");
+      alert(error.res?.data?.error || "Signup failed");
     }
   };
 
