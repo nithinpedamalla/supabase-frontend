@@ -3,6 +3,7 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Welcome  from "./components/Welcome";
 import HomePage from "./components/HomePage";
+import VerifyPhone from "./components/VerifyPhone";
 
 
 function App() {
